@@ -1,2 +1,5 @@
 # PandasRelated
-Some work projects I created
+Script to automate daily analysis
+
+Change multiple values in cells.
+
