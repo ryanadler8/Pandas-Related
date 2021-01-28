@@ -55,8 +55,6 @@ dfcovid['Entered'] = dfcovid['Entered'].dt.strftime('%m/%d/%Y')
 dfcovid['Req Merch Amt'] = dfcovid['Req Merch Amt'].apply(lambda x: "${:,.2f}".format((x)))
 dfcovid['Merchandise Amt'] = dfcovid['Merchandise Amt'].apply(lambda x: "${:,.2f}".format((x)))
 
-dfcovid.info()
-
 writer = pd.ExcelWriter(filepath, engine='xlsxwriter')
 dfcovid.to_excel(writer, sheet_name='COVID REQ NAMES', index=False, startrow=0, startcol=0)
 dfcombo.to_excel(writer, sheet_name='COMBOs', index=False, startrow=0, startcol=0)
