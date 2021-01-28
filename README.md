@@ -5,7 +5,17 @@ Scripts to automate daily analysis.
   - Vlookup's using python dictionaries
   - Changing multiple values
   - Concatenating columns
-  - Reformatting to concatenate
+  - Reformatting columns to concatenate
   - Moving data to multiple tabs
   - Creating new tables
   - Getting totals of unique values
+  
+  
+  
+# Libraries used in my scripts
+  - Pandas (https://pandas.pydata.org/)
+  - Numpy (https://numpy.org/)
+  - Openpyxl (https://openpyxl.readthedocs.io/en/stable/)
+  - Xlsxwriter (https://xlsxwriter.readthedocs.io/)
+  - os (https://docs.python.org/3/library/os.html)
+  
