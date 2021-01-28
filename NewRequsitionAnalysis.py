@@ -9,7 +9,7 @@ comboinput= input('Enter current COMBO Query: ')
 covidfileinput = input('Enter COVID file to be analyzed: ')
 covidyestfileinput = input('Enter the most recent COVID file to be analyzed against: ')
 
-dfcombo = pd.read_excel(filename + comboinput, index_col='Rule', skiprows=1)
+dfcombo = pd.read_excel(filepath + comboinput, index_col='Rule', skiprows=1)
 dfcombo.rename(mapper= {'KK_COMBO': 'HOS01',
                        'COMB_FHC11': 'FHC11',
                        'KK_COMBO_S': 'SOM01',
@@ -57,7 +57,7 @@ dfcovid['Merchandise Amt'] = dfcovid['Merchandise Amt'].apply(lambda x: "${:,.2f
 
 dfcovid.info()
 
-writer = pd.ExcelWriter('C:\\Users\\ryanc\\Documents\\Python Scripts\\COVID Project\\NewCOVIDfile.xlsx', engine='xlsxwriter')
+writer = pd.ExcelWriter(filepath, engine='xlsxwriter')
 dfcovid.to_excel(writer, sheet_name='COVID REQ NAMES', index=False, startrow=0, startcol=0)
 dfcombo.to_excel(writer, sheet_name='COMBOs', index=False, startrow=0, startcol=0)
 writer.save()
