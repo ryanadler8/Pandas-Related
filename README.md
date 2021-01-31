@@ -14,7 +14,6 @@ Scripts to automate daily analysis.
   
 # Libraries used in my scripts
   - Pandas (https://pandas.pydata.org/)
-  - Numpy (https://numpy.org/)
   - Openpyxl (https://openpyxl.readthedocs.io/en/stable/)
   - Xlsxwriter (https://xlsxwriter.readthedocs.io/)
   - os (https://docs.python.org/3/library/os.html)
