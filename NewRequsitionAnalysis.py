@@ -10,13 +10,13 @@ covidfileinput = input('Enter COVID file to be analyzed: ')
 covidyestfileinput = input('Enter the most recent COVID file to be analyzed against: ')
 
 dfcombo = pd.read_excel(filepath + comboinput, index_col='Rule', skiprows=1)
-dfcombo.rename(mapper= {'KK_COMBO': 'HOS01',
-                       'COMB_FHC11': 'FHC11',
-                       'KK_COMBO_S': 'SOM01',
-                       'KK_COMBO_H': 'HSI01',
-                       'COMB_SOM02': 'SOM02',
-                       'COMB_MSO01': 'MSO01',
-                       'COMB_SBD11': 'SBD11'}, inplace=True)
+dfcombo.rename(mapper= {'HOS': 'Hospital',
+                       'FIRE': 'Fire House',
+                       'SCHL': 'School',
+                       'POL': 'Police',
+                       'Air': 'Airport',
+                       'Off': 'Office',
+                       'HOME': 'Home'}, inplace=True)
 
 dfcombo.reset_index(inplace=True)
 dfcombo['Req Fund']= dfcombo['Req Fund'].astype('str')
